@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+:root {
+  --background: #212121;
+  --text: #ffffff;
+  --text-secondary: #5d5d5d;
+  --text-tertiary: #b4b4b4;
+  --primary: #303030;
+  --secondary: #171717;
+  --red: #ef4444;
+}
+.body {
+  background-color: var(--background);
+}
+.logo {
+  width: auto;
+  height: 50px;
+  margin-bottom: 15px;
+}
+.chip-btn {
+  color: var(--text);
+  font-size: 0.875rem;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1px solid hsl(0deg 0% 100% / 15%);
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.chip-btn:hover {
+  color: var(--text-tertiary);
+}
+.navbar-nav {
+  justify-content: end;
+}
+@media (max-width: 991px) {
+  .sidebar {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  .offcanvas-body {
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .navbar-nav {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
