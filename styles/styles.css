@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", serif;
-}
 :root {
   --background: #212121;
   --text: #ffffff;
@@ -14,8 +8,16 @@
   --primary: #303030;
   --secondary: #171717;
   --red: #ef4444;
+  --accent: #f9e619;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
 }
 .body {
+  min-height: 100vh;
   background-color: var(--background);
 }
 .logo {
@@ -33,12 +35,19 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  transition: border 300ms;
 }
 .chip-btn:hover {
-  color: var(--text-tertiary);
+  color: var(--text);
+  border: 1px solid var(--text);
 }
 .navbar-nav {
   justify-content: end;
+}
+.quote{
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 30px 0px;
 }
 @media (max-width: 991px) {
   .sidebar {
@@ -47,7 +56,7 @@
     backdrop-filter: blur(10px);
   }
   .offcanvas-body {
-    font-size: x-large;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     gap: 50px;

@@ -15,7 +15,7 @@
   <body class="body">
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
       <div class="container">
-        <a class="navbar-brand fs-4" href="#">
+        <a class="navbar-brand fs-4" href="index.html">
           <img class="logo" src="assets/momntom.png" alt="mom n' tom logo" />Mom
           n' Tom</a
         >
@@ -49,20 +49,87 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav align-item-center flex-grow-1">
               <li class="nav-item mx-2">
-                <a class="nav-link" href="#">System?</a>
+                <a class="nav-link" href="system.html">System?</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="#">Developer</a>
+                <a class="nav-link" href="developer.html">Developer</a>
               </li>
             </ul>
-            <div class="d-inline-flex align-item-center justify-content-center gap-3"><a href="#" class="chip-btn">help?</a></div>
+            <div
+              class="d-inline-flex align-item-center justify-content-center gap-3"
+            >
+              <a href="guide.html" class="chip-btn">help?</a>
+            </div>
           </div>
         </div>
       </div>
     </nav>
+    <h1 class="quote text-white text-center">
+      &#x201C;<i>That one fancy quote</i>&#x201D;
+    </h1>
+    <div class="container d-flex flex-column align-items-center">
+      <ul id="todo-list">
+        <li class="todo">
+          <input type="checkbox" id="todo-1" />
+          <label for="todo-1" class="custom-checkbox">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+            </svg>
+          </label>
+          <label for="todo-1" class="todo-text">this where all our list </label>
+          <button type="button" aria-label="Delete" class="delete-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path
+                d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="todo">
+          <input type="checkbox" id="todo-2" />
+          <label for="todo-2" class="custom-checkbox">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+            </svg>
+          </label>
+          <label for="todo-2" class="todo-text">this where all our list </label>
+          <button type="button" aria-label="Delete" class="delete-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 -960 960 960"
+              width="24"
+            >
+              <path
+                d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+      <form action="">
+        <input type="text" id="todo-input" placeholder="create your system" />
+        <button type="submit" id="add-button">&#x2191;</button>
+      </form>
+    </div>
     <script src="scripts/main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
