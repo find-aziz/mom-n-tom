@@ -128,7 +128,7 @@
   }
 }
 .custom-checkbox {
-  border: 2px solid var(--blue);
+  border: 2px solid var(--accent);
   border-radius: 50%;
   min-height: 20px;
   min-width: 20px;
@@ -140,6 +140,7 @@
   cursor: pointer;
 }
 input[type="checkbox"]:checked ~ .custom-checkbox{
+  border: 2px solid var(--blue);
   background-color: var(--blue);
 }
 input[type="checkbox"]:checked ~ .custom-checkbox svg{
