@@ -64,7 +64,7 @@
 }
 #todo-input {
   box-sizing: border-box;
-  width: 95%;
+  width: 90%;
   background-color: transparent;
   padding: 12px 8px;
   font: inherit;
@@ -139,18 +139,18 @@
   transition: 200ms ease;
   cursor: pointer;
 }
-input[type="checkbox"]:checked ~ .custom-checkbox{
+input[type="checkbox"]:checked ~ .custom-checkbox {
   border: 2px solid var(--blue);
   background-color: var(--blue);
 }
-input[type="checkbox"]:checked ~ .custom-checkbox svg{
+input[type="checkbox"]:checked ~ .custom-checkbox svg {
   fill: var(--text);
 }
 input[type="checkbox"]:checked ~ .todo-text {
   color: var(--text-tertiary);
   text-decoration: line-through;
 }
-input[type="checkbox"]{
+input[type="checkbox"] {
   display: none;
 }
 @media (max-width: 991px) {
@@ -186,8 +186,8 @@ input[type="checkbox"]{
     width: 95%;
   }
 }
-@media (max-width: 500px){
-  html{
+@media (max-width: 500px) {
+  html {
     font-size: 12pt;
   }
 }
