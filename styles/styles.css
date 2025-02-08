@@ -147,7 +147,7 @@
   }
 }
 .custom-checkbox {
-  border: 2px solid var(--accent);
+  border: 2px solid var(--text-tertiary);
   border-radius: 50%;
   min-height: 20px;
   min-width: 20px;

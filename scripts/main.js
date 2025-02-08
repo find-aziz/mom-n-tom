@@ -10,7 +10,17 @@ const quotes = [
   "Success is not final, failure is not fatal.",
   "Do what you can, with what you have, where you are.",
   "Opportunities don't happen, you create them.",
-  "Don't watch the clock; do what it does. Keep going."
+  "Don't watch the clock; do what it does. Keep going.",
+  "It's not how good you are, it's how bad you want it.",
+  "You only live once, but if you do it right, once is enough.",
+  "Insanity is doing the same thing, over and over again, but expecting different results.",
+  "Tough times don't last, tough people do.",
+  "Every accomplishment starts with the decision to try.",
+  "The vast majority of us are slaves to our minds. Most don’t even make the first effort when it comes to mastering their thought process because it’s a never-ending chore and impossible to get right every time.",
+  "From the time you take your first breath, you become eligible to die. You also become eligible to find your greatness and become the one warrior.",
+  "You want to be uncommon amongst uncommon people. Period.", 
+  "I don’t stop when I’m tired, I stop when I’m done.",
+  "You may lose the battle of the morning but don’t lose the war of the day."
 ];
 
 function getRandomQuote() {
