@@ -5,6 +5,23 @@ const todoListUl = document.getElementById("todo-list");
 let allTodos = getTodos();
 updateTodoList();
 
+const quotes = [
+  "Believe in yourself and all that you are.",
+  "Success is not final, failure is not fatal.",
+  "Do what you can, with what you have, where you are.",
+  "Opportunities don't happen, you create them.",
+  "Don't watch the clock; do what it does. Keep going."
+];
+
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length); // Pick a random index
+  return quotes[randomIndex]; // Return the random quote
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".quote").innerHTML = `&#x201C;<i>${getRandomQuote()}</i>&#x201D;`;
+});
+
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addTodo();
