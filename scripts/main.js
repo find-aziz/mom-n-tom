@@ -1,6 +1,7 @@
 const todoForm = document.querySelector("form");
 const todoInput = document.getElementById("todo-input");
 const todoListUl = document.getElementById("todo-list");
+const uncheckButton = document.getElementById("uncheck-all");
 
 let allTodos = getTodos();
 updateTodoList();
@@ -18,9 +19,21 @@ const quotes = [
   "Every accomplishment starts with the decision to try.",
   "The vast majority of us are slaves to our minds. Most don’t even make the first effort when it comes to mastering their thought process because it’s a never-ending chore and impossible to get right every time.",
   "From the time you take your first breath, you become eligible to die. You also become eligible to find your greatness and become the one warrior.",
-  "You want to be uncommon amongst uncommon people. Period.", 
+  "You want to be uncommon amongst uncommon people. Period.",
   "I don’t stop when I’m tired, I stop when I’m done.",
-  "You may lose the battle of the morning but don’t lose the war of the day."
+  "You may lose the battle of the morning but don’t lose the war of the day.",
+  "No one prepares for battle on the day it begins.",
+  "Don't covet what you lack. Building plans on elusive desires sets you up for downfall.",
+  "Lose focus, and you lose interest. No focus means no interest. To achieve something you truly desire, keep it top of mind.",
+  "Deconstruct, self-correct, eliminate barriers, and practice relentlessly.",
+  "It will happen whether you want it or not, so make up your mind and embrace the change.",
+  "Life isn't a game of dice where outcomes rely on coincidence; it's a game of chess where one wrong move concludes the end.",
+  "When it rains, the unprepared blame the weather; the accountable prepare their umbrella.",
+  "If nothing changes, nothing changes. If you want change, make some.",
+  "If you always do what you've always done, you'll always get what you've always got.",
+  "Either you run the day, or the day runs you.",
+  "Once you start, keep going until it's done.",
+  "A disciplined mentality, a calm mind, and a fit body cannot be bought; they must be earned.",
 ];
 
 function getRandomQuote() {
@@ -29,13 +42,29 @@ function getRandomQuote() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".quote").innerHTML = `&#x201C;<i>${getRandomQuote()}</i>&#x201D;`;
+  document.querySelector(
+    ".quote"
+  ).innerHTML = `&#x201C;<i>${getRandomQuote()}</i>&#x201D;`;
 });
 
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addTodo();
 });
+
+document.getElementById("uncheck-all").addEventListener("click", () => {
+  const checkboxes = document.querySelectorAll(
+    ".todo-list input[type='checkbox']"
+  );
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+  allTodos.forEach((todo) => {
+    todo.completed = false;
+  });
+  saveTodos();
+});
+
 function addTodo() {
   const todoText = todoInput.value.trim();
   if (todoText.length > 0) {
@@ -55,6 +84,7 @@ function updateTodoList() {
     todoItem = createTodoItem(todo, todoIndex);
     todoListUl.append(todoItem);
   });
+  toggleUncheckButton();
 }
 function createTodoItem(todo, todoIndex) {
   const todoId = `todo-${todoIndex}`;
@@ -114,4 +144,13 @@ function saveTodos() {
 function getTodos() {
   const todos = localStorage.getItem("todos") || "[]";
   return JSON.parse(todos);
+}
+function toggleUncheckButton() {
+  const checkboxes = document.querySelectorAll(".todo-list input[type='checkbox']");
+  
+  if (checkboxes.length > 1) {
+    uncheckButton.style.display = "block";
+  } else {
+    uncheckButton.style.display = "none";
+  }
 }
