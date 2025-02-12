@@ -65,6 +65,24 @@ document.getElementById("uncheck-all").addEventListener("click", () => {
   saveTodos();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const hand = document.getElementById("hand");
+  let angle = 15; // Initial angle
+  let direction = 1; // 1 for right, -1 for left
+
+  function waveHand() {
+    angle = direction * 15; // Toggle between 15 and -15
+    hand.style.transform = `rotate(${angle}deg)`;
+    direction *= -1; // Reverse direction
+  }
+
+  // Start waving immediately
+  waveHand();
+
+  // Run the wave animation every 300ms
+  setInterval(waveHand, 300);
+});
+
 function addTodo() {
   const todoText = todoInput.value.trim();
   if (todoText.length > 0) {
@@ -146,8 +164,10 @@ function getTodos() {
   return JSON.parse(todos);
 }
 function toggleUncheckButton() {
-  const checkboxes = document.querySelectorAll(".todo-list input[type='checkbox']");
-  
+  const checkboxes = document.querySelectorAll(
+    ".todo-list input[type='checkbox']"
+  );
+
   if (checkboxes.length > 1) {
     uncheckButton.style.display = "block";
   } else {
